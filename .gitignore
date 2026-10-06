@@ -1,4 +1,6 @@
-.DS_store
+.DS_Store
 data/raw/
 data/processed/
 data/lookup/
+
+~$*
