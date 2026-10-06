@@ -23,11 +23,11 @@ TRUNCATE TABLE staging.mot_results;
 
 BULK INSERT staging.mot_results FROM '/var/opt/mssql/import/mot_results_filtered.csv'
     WITH (FORMAT = 'CSV', FIRSTROW = 2, FIELDTERMINATOR = ',', ROWTERMINATOR = '0x0a', TABLOCK); -- understands standard CSV rules (e.g. quoted values)
- -- skip row 1: the header with column names
- -- columns are separated by commas
- -- each row ends with a newline (hex code 0a)
- -- lock the whole table while loading: much faster
 
+-- skip row 1: the header with column names
+-- columns are separated by commas
+-- each row ends with a newline (hex code 0a)
+-- lock the whole table while loading: much faster
 TRUNCATE TABLE staging.mot_failures;
 
 BULK INSERT staging.mot_failures FROM '/var/opt/mssql/import/mot_failures_filtered.csv'
