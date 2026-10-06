@@ -16,9 +16,10 @@ Aftersales managers and the dealer network team (non-technical readers).
 5. Which dealers have the highest costs and slowest repairs?
 
 ## Scope
-- Vehicles: cars only (MOT class 4), about 10 makes
+- Vehicles: cars only (MOT class 4); focus brand MG, compared with Kia, Hyundai, Dacia, Skoda, Vauxhall, Ford, Toyota, Nissan and Tesla
 - Geography: Great Britain
 - Period: MOT tests in 2024
+
 
 ## Data sources and why they were chosen
 | Source | Tables | Type | Why |
