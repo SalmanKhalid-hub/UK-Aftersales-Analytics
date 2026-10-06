@@ -1,0 +1,51 @@
+dealer_id,dealer_name,region
+D001,Reading Branch,South East
+D002,  Oxford Branch,South East
+D003,Guildford Branch,South East
+D004,Brighton Branch,South East
+D005,maidstone branch,South East
+D006,Southampton Branch,South East
+D007,Portsmouth Branch,South East
+D008,Milton Keynes Branch,South East
+D009,croydon branch,London
+D010,Ealing Branch,London
+D011,Enfield Branch,London
+D012,ROMFORD BRANCH,London
+D013,Bristol Branch,South West
+D014,Exeter Branch,South West
+D015,Plymouth Branch,South West
+D016,Swindon Branch,South West
+D017,Bath Branch,South West
+D018,Birmingham Branch,Midlands
+D019,Coventry Branch,Midlands
+D020,Leicester Branch,Midlands
+D021,Nottingham Branch,Midlands
+D022,Derby Branch,Midlands
+D023,Wolverhampton Branch,Midlands
+D024,Stoke Branch,Midlands
+D025,Northampton Branch,Midlands
+D026,Cambridge Branch,East
+D027,Norwich Branch,East
+D028,Ipswich Branch,East
+D029,Peterborough Branch,East
+D030,Manchester Branch,North West
+D031,Liverpool Branch,North West
+D032,Preston Branch,North West
+D033,Bolton Branch,North West
+D034,Chester Branch,North West
+D035,Stockport Branch,North West
+D036,Leeds Branch,North East
+D037,Sheffield Branch,North East
+D038,York Branch,North East
+D039,Newcastle Branch  ,North East
+D040,Hull Branch,North East
+D041,Bradford Branch,North East
+D042,Sunderland Branch,North East
+D043,Cardiff Branch,Wales
+D044,Swansea Branch,Wales
+D045,Newport Branch,Wales
+D046,Glasgow Branch,Scotland
+D047,Edinburgh Branch,Scotland
+D048,Aberdeen Branch,Scotland
+D049,Dundee  Branch,Scotland
+D050,Inverness Branch,Scotland

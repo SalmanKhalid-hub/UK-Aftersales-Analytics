@@ -1,0 +1,7 @@
+ANSWER KEY: planted data problems (check the Phase 4 SQL cleaning against these)
+Dealers: 50
+Job rows in file: 20300 (20000 real jobs + 300 duplicates)
+1. Duplicate job rows: 300
+2. Messy dealer names: 6 -> ['D002', 'D005', 'D009', 'D012', 'D039', 'D049']
+3. Closed before opened: 120
+Not a problem: still-open jobs (blank closed_date): 239
