@@ -1,8 +1,10 @@
 # Business Brief: UK Aftersales Reliability & Dealer Performance
 
 ## Purpose
-Give an aftersales team a clear view of (1) how reliable a brand's vehicles are
-compared with the market and (2) how well its dealer network performs, so they
+Give an aftersales team a clear view of 
+(1) how reliable a brand's vehicles are
+compared with the market. 
+(2) how well its dealer network performs, so they
 can act on parts planning, service campaigns and dealer support.
 
 ## Audience
