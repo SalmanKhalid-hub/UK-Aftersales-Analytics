@@ -14,6 +14,8 @@ An end-to-end analytics project for a car brand's aftersales team. It answers tw
 | Finding | Detail |
 |---|---|
 | MG passes its first MOT **87.5%** of the time | 4th of 10 brands, about 1.3 points above the competitor average; ahead of Kia and Hyundai, behind Toyota (89.5%) |
+| MG ages less well in the middle years | At 5 to 6 years old MG fails 23.2% of MOTs vs 18.5% for competitors (9th of 10) |
+| MG's top failures: lighting, brakes, tyres | Together about 70% of MG failures; MG's tyre share is 2nd highest after Tesla |
 | Three dealers need a review | Milton Keynes and Chester are the slowest to repair cars; Bristol is the most expensive (synthetic data) |
 | A third of the raw data was duplicated | 32% of MOT rows were repeats; without cleaning, every KPI would have been inflated |
 
