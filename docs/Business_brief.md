@@ -33,8 +33,8 @@ Aftersales managers and the dealer network team (non-technical readers).
 ## KPI definitions
 | # | KPI | Definition | Notes |
 |---|---|---|---|
-| 1 | First-MOT pass rate | Tests passed first time ÷ all first MOT tests, by make and model | First MOT = vehicle aged 3 to 4 years at test. "Pass after rectification" counts as a fail, because a defect was found |
-| 2 | Failure rate by age band | Tests with at least one failure ÷ all tests, by age band | Age at test = test date minus first-use date; bands 3-4, 5-6, 7-9, 10+ years |
+| 1 | First-MOT pass rate | Tests passed first time ÷ all first MOT tests, by make and model | First MOT = vehicle aged 3 at test (36 to 47 months). "Pass after rectification" counts as a fail, because a defect was found |
+| 2 | Failure rate by age band | Tests with at least one failure ÷ all tests, by age band | Age at test = test date minus first-use date; bands Under 3, 3-4, 5-6, 7-9, 10+ years |
 | 3 | Top failure categories | Failures in a category ÷ all failures | e.g. brakes, tyres, lighting, suspension |
 | 4 | EV vs petrol/diesel failure rate | Failure rate (as KPI 2) split by fuel type | |
 | 5 | Cost per job | Total job cost ÷ number of jobs, per dealer | Mean, because finance needs totals. Synthetic data |

@@ -2,7 +2,7 @@
 
 An end-to-end analytics project for a car brand's aftersales team. It answers two questions:
 
-1. **How reliable are MG cars compared with the market?** Using 17.5 million real UK MOT tests for MG and 9 competitors.
+1. **How reliable are MG cars compared with the market?** Using about 12 million real UK MOT tests (2024) for MG and 9 competitors.
 2. **How well does the dealer network handle repairs?** Using synthetic dealer data (real dealer data is confidential).
 
 **Tools:** Python, SQL Server (T-SQL), Excel + VBA, Power BI
@@ -37,7 +37,7 @@ flowchart LR
 | Step | What happens | Files |
 |---|---|---|
 | 1. Plan | Business questions and 6 KPI definitions | `docs/Business_brief.md`, `docs/data_dictionary.md` |
-| 2. Extract and filter | Python reads the MOT zips in 1-million-row chunks and keeps only cars, the 10 brands, normal tests and the needed columns (12.8 GB to 17.5m rows) | `python/01_filter_mot.py` |
+| 2. Extract and filter | Python reads the MOT zips in 1-million-row chunks and keeps only cars, the 10 brands, normal tests and the needed columns (12.8 GB to 17.6m rows; about 12m unique tests after removing duplicates in SQL) | `python/01_filter_mot.py` |
 | 3. Synthetic dealer data | 50 dealers and 20,300 repair jobs, with planted data problems and an answer key | `python/02_generate_dealers.py`, `data/synthetic/` |
 | 4. Load | Raw data bulk-loaded into SQL Server `staging`; row counts reconciled with the files | `sql/00` to `sql/02` |
 | 5. Profile | Data quality problems measured before fixing | `sql/03_profile_staging.sql` |
@@ -117,6 +117,8 @@ The dealer cleaning found **exactly** the problems planted by the generator (see
 
 - Dealer data is synthetic, so the dealer findings demonstrate the method, not real dealer performance.
 - About 96,000 MOT tests (under 1%) appeared in two slightly different versions; one was kept. This does not change the results.
+- Age is measured in whole years (months ÷ 12, rounded down). Cars can take their first MOT up to a month early, so the "Under 3" band is mostly early first MOTs, which KPI 1 (age 3) leaves out.
+- The fuel comparison is not adjusted for age: EVs are younger cars, so they naturally fail less. MG's diesel result is based on only 828 tests of older cars.
 - MOT results reflect cars that were tested, so they measure roadworthiness at the test, not every fault a car has had.
 
 ---
