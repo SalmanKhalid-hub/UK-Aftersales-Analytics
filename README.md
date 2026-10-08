@@ -5,7 +5,7 @@ An end-to-end analytics project for a car brand's aftersales team. It answers tw
 1. **How reliable are MG cars compared with the market?** Using 17.5 million real UK MOT tests for MG and 9 competitors.
 2. **How well does the dealer network handle repairs?** Using synthetic dealer data (real dealer data is confidential).
 
-**Tools:** Python, SQL Server (T-SQL), Excel + VBA, Power BI (in progress)
+**Tools:** Python, SQL Server (T-SQL), Excel + VBA, Power BI
 
 ---
 
@@ -16,7 +16,7 @@ An end-to-end analytics project for a car brand's aftersales team. It answers tw
 | MG passes its first MOT **87.5%** of the time | 4th of 10 brands, about 1.3 points above the competitor average; ahead of Kia and Hyundai, behind Toyota (89.5%) |
 | MG ages less well in the middle years | At 5 to 6 years old MG fails 23.2% of MOTs vs 18.5% for competitors (9th of 10) |
 | MG's top failures: lighting, brakes, tyres | Together about 70% of MG failures; MG's tyre share is 2nd highest after Tesla |
-| Three dealers need a review | Milton Keynes and Chester are the slowest to repair cars; Bristol is the most expensive (synthetic data) |
+| Two dealers stand out | Milton Keynes takes 4 days to repair a car, twice the network's typical 2 days; Bristol has the highest cost per job at £349 vs a £254 average (synthetic data) |
 | A third of the raw data was duplicated | 32% of MOT rows were repeats; without cleaning, every KPI would have been inflated |
 
 ---
@@ -44,7 +44,27 @@ flowchart LR
 | 6. Clean | Duplicates removed, fuel codes standardised, names tidied, invalid dates flagged; every fix logged | `sql/04_clean.sql` |
 | 7. KPIs | Six KPIs saved as SQL views in the `reporting` schema | `sql/05_kpi_views.sql` |
 | 8. Excel report | One-page dealer scorecard (INDEX/MATCH); a VBA macro exports a PDF for each of the 50 dealers | `excel/` |
-| 9. Power BI | Three-page dashboard: MG vs the market, failure patterns, dealer performance | `powerbi/` (in progress) |
+| 9. Power BI | Three-page dashboard: MG vs the market, failure patterns, dealer performance | `powerbi/` |
+
+---
+
+## Power BI dashboard
+
+Three pages, each answering one question. The Make slicer on page 2 lets you compare any brand with MG.
+
+[Watch the 45-second demo](powerbi/dashboard_demo.mp4) · [Full report as PDF](powerbi/aftersales_dashboard.pdf)
+
+**1. Is MG more reliable than its competitors?**
+
+![Reliability page](powerbi/page1.png)
+
+**2. How and when do MG cars fail?**
+
+![Failure patterns page](powerbi/page2.png)
+
+**3. Which dealers need attention?**
+
+![Dealers page](powerbi/page3.png)
 
 ---
 
@@ -89,6 +109,7 @@ The dealer cleaning found **exactly** the problems planted by the generator (see
 2. `python python/01_filter_mot.py` and `python python/02_generate_dealers.py`
 3. Run SQL Server (Docker on Mac), then the scripts in `sql/` in number order: `00` to `05`.
 4. Export `reporting.vw_dealer_scorecard` to `excel/dealer_scorecard.csv`, open `excel/dealer_scorecard.xlsm` and run the `ExportDealerPDFs` macro.
+5. Open `powerbi/aftersales_dashboard.pbix` in Power BI Desktop (Windows). It reads the CSV exports in `powerbi/data/`.
 
 ---
 
