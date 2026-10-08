@@ -41,8 +41,7 @@ Aftersales managers and the dealer network team (non-technical readers).
 | 6 | Turnaround time | Days from job opened to job closed (closed date minus opened date), median per dealer | Median because a few long parts delays skew the mean. Jobs closed before they were opened are excluded and logged as a data quality issue. Jobs with no closed date are still open and are excluded |
 
 ## Assumptions and open questions
-- Exact MOT column names and codes to be confirmed in Phase 2 (data profiling)
-- "Focus brand" is a parameter; default MG
+- MOT column names and codes confirmed during profiling; see docs/data_dictionary.md
 
 ## Stretch goals (if time allows)
 - DVSA recalls data; % of jobs over 7 days; mileage bands
